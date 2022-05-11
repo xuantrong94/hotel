@@ -1,0 +1,138 @@
+.header {
+  background-color: #003580;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1024px;
+    margin: 20px 0 100px 0;
+
+    &.list-mode {
+    margin: 20px 0 0 0;
+
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &.active {
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  &__desc {
+    margin: 20px 0;
+  }
+
+  &__btn {
+    background-color: #0071c2;
+    color: white;
+    font-weight: 500;
+    padding: 10px;
+    cursor: pointer;
+    width: 15%;
+  }
+
+  &__search {
+    height: 50px;
+    background-color: white;
+    border: 3px solid #febb02;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -25px;
+    width: 100%;
+    max-width: 1024px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      &__icon {
+        color: lightgray;
+      }
+
+      &__input {
+        border: none;
+        outline: none;
+      }
+
+      &__text {
+        color: lightgray;
+        // cursor: pointer;
+      }
+
+      &__btn {
+        background-color: #0071c2;
+        color: white;
+        font-weight: 500;
+        padding: 10px;
+        cursor: pointer;
+      }
+
+      &__date {
+        position: absolute;
+        top: 50px;
+        z-index: 2;
+      }
+
+      &__options {
+        z-index: 2;
+        position: absolute;
+        top: 50px;
+        background-color: white;
+        color: gray;
+        border-radius: 5px;
+        box-shadow: 0 0 10px -5px rgba($color: #000000, $alpha: 0.4);
+
+        &__item {
+          width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin: 10px;
+
+          &__counter {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #000;
+
+            &__btn {
+              width: 30px;
+              height: 30px;
+              border: 1px solid #0071c2;
+              color: 1px solid #0071c2;
+              cursor: pointer;
+              background-color: white;
+
+              &:disabled {
+                cursor: not-allowed;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
